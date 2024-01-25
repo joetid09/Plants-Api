@@ -7,7 +7,7 @@ namespace Plants_Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class PlantController : ControllerBase
     {
         PlantDetails[] plantDetails = new PlantDetails[] 
         { 
@@ -64,14 +64,14 @@ namespace Plants_Api.Controllers
         };
 
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<PlantController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public PlantController(ILogger<PlantController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetPlants")]
         public IEnumerable<PlantDetails> Get()
         {
             return plantDetails;

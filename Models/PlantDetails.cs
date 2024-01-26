@@ -1,4 +1,4 @@
-namespace Plants_Api
+namespace Plants_Api.Models
 {
     public class PlantDetails
     {

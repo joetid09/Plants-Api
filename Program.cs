@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Plants_Api.Contexts;
+using Plants_Api.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,5 +33,7 @@ app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapUserEndpoints();
 
 app.Run();

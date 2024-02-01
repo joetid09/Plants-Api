@@ -14,7 +14,7 @@ namespace Plants_Api.Controllers
     {
         private readonly IAccountService _accountService;
 
-        AccountController(IAccountService accountService)
+        public AccountController(IAccountService accountService)
         {
             _accountService = accountService;
         }
@@ -23,27 +23,26 @@ namespace Plants_Api.Controllers
         //[HttpPost]
 
         // GET: api/PlantDetails/5
-        [HttpGet("{id}")]
+        [HttpGet("{username}")]
         public ActionResult<bool> Login(string username)
         {
-            bool authorized = _accountService.Login(username);
             return _accountService.Login(username);
         }
-        public void Post([FromBody] string value)
-        {
+        //public void Post([FromBody] string value)
+        //{
             
-        }
+        //}
 
-        // PUT api/<AccountController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        //// PUT api/<AccountController>/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody] string value)
+        //{
+        //}
 
-        // DELETE api/<AccountController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE api/<AccountController>/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }
